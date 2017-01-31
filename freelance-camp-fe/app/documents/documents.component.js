@@ -8,6 +8,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var DocumentsComponent = (function () {
     function DocumentsComponent() {
+        this.documents = [
+            {
+                title: "My First Doc",
+                description: "random desc",
+                file_url: "http://google.com",
+                updated_at: "1/30/2017",
+                image_url: 'http://google.com'
+            },
+            {
+                title: "My Second Doc",
+                description: "random 2nd desc",
+                file_url: "http://google.com",
+                updated_at: "2/01/2017",
+                image_url: 'http://google.com'
+            },
+            {
+                title: "My Third Doc",
+                description: "random 3rd desc",
+                file_url: "http://google.com",
+                updated_at: "2/02/2017",
+                image_url: 'http://google.com'
+            }
+        ];
     }
     return DocumentsComponent;
 }());
