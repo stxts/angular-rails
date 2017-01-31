@@ -15,7 +15,7 @@ AppComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'app',
-        template: '<h1>Navigation</h1>'
+        template: "\n\n\t<h1>Navigation</h1>\n\n\t<router-outlet></router-outlet>\n\n\t"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
