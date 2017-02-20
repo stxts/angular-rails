@@ -1,0 +1,7 @@
+.ng-pristine.ng-invalid {
+    box-shadow: none;
+}
+
+.form-container {
+	padding: 30px;
+}
