@@ -15,6 +15,7 @@ var documents_component_1 = require("./documents/documents.component");
 var proposal_list_component_1 = require("./proposal/proposal-list.component");
 var proposal_new_component_1 = require("./proposal/proposal-new.component");
 var proposal_show_component_1 = require("./proposal/proposal-show.component");
+var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,7 +26,8 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             app_routing_module_1.AppRoutingModule,
-            forms_1.FormsModule
+            forms_1.FormsModule,
+            ng_bootstrap_1.NgbModule.forRoot()
         ],
         declarations: [
             app_component_1.AppComponent,
