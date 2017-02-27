@@ -18,7 +18,6 @@ var DocumentService = (function () {
         // set url query string to variable
         this.documentsUrl = 'http://localhost:3001/freelance_documents.json';
     }
-    // function to get documents
     DocumentService.prototype.getDocuments = function () {
         return this.http.get(this.documentsUrl)
             .map(function (response) { return response.json(); })

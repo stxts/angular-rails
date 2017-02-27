@@ -1,24 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Document } from './document'
-
+import { Document } from './document';
 
 @Injectable()
 export class DocumentService {
-	// set url query string to variable
+  // set url query string to variable
 	private documentsUrl = 'http://localhost:3001/freelance_documents.json';
 
-	// dependency injection
+  // dependency injection
 	constructor(
 		private http: Http
 	){}
 
-	// function to get documents
 	getDocuments(): Observable<Document[]>{
 		return this.http.get(this.documentsUrl)
-						.map((response: Response) => <Document[]>response.json())
-						.catch(this.handleError);
+										.map((response: Response) => <Document[]>response.json())
+										.catch(this.handleError);
 	}
 
 	private handleError (error: Response | any) {
@@ -32,6 +30,6 @@ export class DocumentService {
       errMsg = error.message ? error.message : error.toString();
     }
     console.error(errMsg);
-	return Observable.throw(errMsg);
-	}
+    return Observable.throw(errMsg);
+  }
 }

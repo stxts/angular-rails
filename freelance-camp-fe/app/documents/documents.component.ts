@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 import { Document } from './document';
 import { DocumentService } from './document.service';
-import { Observable } from 'rxjs/Rx';
 
 @Component({
 	moduleId: module.id,
@@ -17,19 +17,19 @@ export class DocumentsComponent implements OnInit {
 	mode = "Observable";
 
 	constructor(
-		private documentService: DocumentService;
-		) {}
+		private documentService: DocumentService
+	) {}
 
-	ngOnInit(){
+	ngOnInit() {
 		let timer = Observable.timer(0, 5000);
 		timer.subscribe(() => this.getDocuments());
 	}
 
 	getDocuments() {
 		this.documentService.getDocuments()
-			.subscribe(
-				documents => this.documents = documents,
-				error => this.errorMessage = <any>error
-				)
+				.subscribe(
+					documents => this.documents = documents,
+					error => this.errorMessage = <any>error
+				);
 	}
 }

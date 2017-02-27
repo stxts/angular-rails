@@ -82,4 +82,4 @@ production:
   <<: *default
   database: freelance_camp_documents_production
   username: freelance_camp_documents
-  password: <%= ENV['FREELANCE_CAMP_DOCUMENTS_DATABASE_PASSWORD'] %>
+password: <%= ENV['FREELANCE_CAMP_DOCUMENTS_DATABASE_PASSWORD'] %>
