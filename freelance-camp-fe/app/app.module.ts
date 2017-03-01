@@ -9,6 +9,7 @@ import { DocumentService } from './documents/document.service';
 import { ProposalListComponent } from './proposal/proposal-list.component';
 import { ProposalNewComponent } from './proposal/proposal-new.component';
 import { ProposalShowComponent } from './proposal/proposal-show.component';
+import { ProposalService } from './proposal/proposal.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule } from '@angular/http';
 
@@ -29,7 +30,8 @@ import { HttpModule } from '@angular/http';
 		ProposalShowComponent
 	],
 	providers: [
-		DocumentService
+		DocumentService,
+		ProposalService
 	],
 	bootstrap: [
 		AppComponent
