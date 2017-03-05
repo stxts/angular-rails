@@ -6,7 +6,7 @@ import { Proposal } from './proposal';
 @Injectable()
 export class ProposalService {
   // set url query string to variable
-	private proposalsUrl = 'http://localhost:3002/proposals.json';
+	private proposalsUrl = 'http://localhost:3002/proposals';
 
   // dependency injection
 	constructor(
@@ -18,6 +18,10 @@ export class ProposalService {
 										.map((response: Response) => <Proposal[]>response.json())
 										.catch(this.handleError);
 	}
+
+  getProposal(id: number) {
+    return this.http.get(this.proposalsUrl + "/" + id + '.json');
+  }
 
 	private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
