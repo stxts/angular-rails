@@ -3,7 +3,7 @@
 		<div class="col-md-6">
 			<h1>Create a Proposal</h1>
 			<div>			
-				<form #proporsalForm="ngForm">
+				<form (ngSubmit)="createProposal(proposal)" #proporsalForm="ngForm">
 					<div class="form-group">
 						<label for="customer">Customer Name</label>
 						<input type="text"
