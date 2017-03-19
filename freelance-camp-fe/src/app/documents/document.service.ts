@@ -6,8 +6,9 @@ import { Document } from './document';
 @Injectable()
 export class DocumentService {
   // set url query string to variable
-	private documentsUrl = 'http://localhost:3001/freelance_documents.json';
-
+	//private documentsUrl = 'http://localhost:3001/freelance_documents.json';
+  private documentsUrl = 'https://freelance-st-documents.herokuapp.com/freelance_documents';
+  
   // dependency injection
 	constructor(
 		private http: Http
