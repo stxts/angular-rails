@@ -6,7 +6,8 @@ import { Proposal } from './proposal';
 @Injectable()
 export class ProposalService {
   // set url query string to variable
-	private proposalsUrl = 'http://localhost:3002/proposals';
+	// private proposalsUrl = 'http://localhost:3002/proposals';
+  private proposalsUrl = 'https://freelance-st-proposals.herokuapp.com/proposals';
 
   // dependency injection
 	constructor(
